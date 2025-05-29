@@ -1,0 +1,23 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Sistem Monitoring Kolam",
+      "description": "Aplikasi Flutter untuk membaca data ESP32.",
+      "tools": ["Flutter", "MQTT", "ESP32"],
+      "date": "2025-04-17"
+    },
+    {
+      "id": 2,
+      "title": "Website Portofolio",
+      "description": "React + Tailwind modern UI portofolio pribadi.",
+      "tools": ["React", "Tailwind", "TypeScript"],
+      "date": "2025-05-29"
+    }
+  ],
+  "certificates": [
+    "/cert/msib.png",
+    "/certs/cybersec_cert.png",
+    "/certs/webdev_cert.png"
+  ]
+}
