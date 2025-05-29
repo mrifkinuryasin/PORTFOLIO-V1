@@ -1,5 +1,6 @@
 import React from 'react';
-import NavBar from './components/navbar';
+import { motion } from 'framer-motion';
+import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
@@ -10,11 +11,17 @@ const App: React.FC = () => {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
-      <Services />
-      <Portfolio />
-      <Contact />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Home />
+        <About />
+        <Services />
+        <Portfolio />
+        <Contact />
+      </motion.div>
     </div>
   );
 };
