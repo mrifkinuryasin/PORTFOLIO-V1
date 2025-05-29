@@ -5,7 +5,9 @@ import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
+import Experience from './components/Experience';
 import Contact from './components/Contact';
+import Testimonials from './components/Testimonials';
 
 const App: React.FC = () => {
   return (
@@ -20,7 +22,9 @@ const App: React.FC = () => {
         <About />
         <Services />
         <Portfolio />
+        <Experience />
         <Contact />
+        <Testimonials />
       </motion.div>
     </div>
   );

@@ -1,35 +1,39 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Code, Palette, Video, } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
     {
       title: 'Web Development',
-      description: 'Crafting responsive and high-performance websites using cutting-edge technologies like React and TypeScript to boost your online presence.',
+      description: 'Building responsive and modern websites with React, Tailwind CSS, and more to enhance your digital presence.',
+      icon: <Code className="w-12 h-12 text-yellow-300" />,
     },
     {
       title: 'UI/UX Design',
-      description: 'Designing intuitive and visually stunning interfaces that enhance user engagement and drive business conversions.',
+      description: 'Creating intuitive and visually appealing interfaces using Figma and Adobe XD for seamless user experiences.',
+      icon: <Palette className="w-12 h-12 text-yellow-300" />,
     },
     {
-      title: 'Tech Consulting',
-      description: 'Providing strategic guidance to optimize your tech stack, streamline development, and achieve your project goals efficiently.',
+      title: 'Video Editing',
+      description: 'Producing high-quality video content with Adobe Premiere and DaVinci Resolve for engaging visuals.',
+      icon: <Video className="w-12 h-12 text-yellow-300" />,
     },
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-100">
+    <section id="services" className="py-20 bg-[#add8e6]/20">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold text-primary text-center mb-12"
+          className="text-4xl font-bold text-accent text-center mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Services
+          My Skills
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -39,8 +43,9 @@ const Services: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <h3 className="text-xl font-semibold text-primary text-center">{service.title}</h3>
-              <p className="text-secondary mt-2 text-center">{service.description}</p>
+              <div className="flex justify-center mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold text-accent text-center">{service.title}</h3>
+              <p className="text-gray-600 mt-2 text-center">{service.description}</p>
             </motion.div>
           ))}
         </div>

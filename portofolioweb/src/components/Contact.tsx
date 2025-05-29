@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Mail, Phone, Instagram, Github } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -9,10 +10,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-100">
+    <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold text-primary text-center mb-12"
+          className="text-4xl font-bold text-accent text-center mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -28,27 +29,30 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="text-2xl font-semibold text-primary mb-4">Let's Collaborate!</h3>
-            <p className="text-secondary mb-6">
-              Whether you have a project in mind or just want to say hi, I'm all ears (or rather, all code). Reach out, and let's create something amazing together!
-            </p>
+            <h3 className="text-2xl font-semibold text-accent mb-4">Contact Info</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <span className="text-accent">[Email Icon]</span>
-                <a href="mailto:your.email@example.com" className="text-secondary hover:text-accent">
+                <Mail className="w-6 h-6 text-yellow-300" />
+                <a href="mailto:your.email@example.com" className="text-gray-600 hover:text-accent">
                   your.email@example.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-accent">[Phone Icon]</span>
-                <a href="tel:+1234567890" className="text-secondary hover:text-accent">
+                <Phone className="w-6 h-6 text-yellow-300" />
+                <a href="tel:+1234567890" className="text-gray-600 hover:text-accent">
                   +1 (234) 567-890
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-accent">[Website Icon]</span>
-                <a href="https://yourwebsite.com" className="text-secondary hover:text-accent">
-                  yourwebsite.com
+                <Instagram className="w-6 h-6 text-yellow-300" />
+                <a href="https://instagram.com/yourhandle" className="text-gray-600 hover:text-accent">
+                  @yourhandle
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Github className="w-6 h-6 text-yellow-300" />
+                <a href="https://github.com/yourusername" className="text-gray-600 hover:text-accent">
+                  @yourusername
                 </a>
               </div>
             </div>
@@ -67,7 +71,7 @@ const Contact: React.FC = () => {
                 value={form.name}
                 onChange={handleInputChange}
                 placeholder="Your Name"
-                className="w-full p-3 rounded-lg border border-gray-300 focus:border-accent focus:ring focus:ring-accent/20 transition"
+                className="w-full p-3 rounded-lg border border-gray-300 focus:border-yellow-300 focus:ring focus:ring-yellow-300/20 transition"
               />
               <input
                 type="email"
@@ -75,16 +79,16 @@ const Contact: React.FC = () => {
                 value={form.email}
                 onChange={handleInputChange}
                 placeholder="Your Email"
-                className="w-full p-3 rounded-lg border border-gray-300 focus:border-accent focus:ring focus:ring-accent/20 transition"
+                className="w-full p-3 rounded-lg border border-gray-300 focus:border-yellow-300 focus:ring focus:ring-yellow-300/20 transition"
               />
               <textarea
                 name="message"
                 value={form.message}
                 onChange={handleInputChange}
                 placeholder="Your Message"
-                className="w-full p-3 rounded-lg border border-gray-300 focus:border-accent focus:ring focus:ring-accent/20 transition h-32"
-              ></textarea>
-              <button className="w-full bg-accent text-primary px-6 py-3 rounded-lg font-semibold hover:bg-accent-dark transition">
+                className="w-full p-3 rounded-lg border border-gray-300 focus:border-yellow-300 focus:ring focus:ring-yellow-300/20 transition h-32"
+              />
+              <button className="w-full bg-yellow-300 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
                 Send Message
               </button>
             </div>
